@@ -126,22 +126,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GlobalVariable.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="ParticleSystem.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="Sea.h" />
-    <ClInclude Include="SkyBox.h" />
-    <ClInclude Include="SpriteRenderer.h" />
-    <ClInclude Include="stb_image.h" />
-    <ClInclude Include="TextRenderer.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="glad.c" />
@@ -161,6 +145,22 @@
     <ClCompile Include="SpriteRenderer.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GlobalVariable.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Sea.h" />
+    <ClInclude Include="SkyBox.h" />
+    <ClInclude Include="SpriteRenderer.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="TextRenderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

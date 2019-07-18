@@ -9,7 +9,7 @@ const unsigned int SCR_WIDTH = 1280;
 const unsigned int SCR_HEIGHT = 720;
 
 // speed
-float MoveSpeed = 30.5f;
+float MoveSpeed = 20.0f;
 
 // camera
 Camera camera = Camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -68,11 +68,11 @@ int imgui_view = IMGUI_VIEW_MOVE;
 
 const int WITH_SHADOW = 0;
 const int WITHOUT_SHADOW = 1;
-int shadow_show = WITHOUT_SHADOW;
+int shadow_show = WITH_SHADOW;
 
 const int WITH_PARTICLE = 0;
 const int WITHOUT_PARTICLE = 1;
-int particle_show = WITHOUT_PARTICLE;
+int particle_show = WITH_PARTICLE;
 
 const int WITH_STENCIL = 0;
 const int WITHOUT_STENCIL = 1;

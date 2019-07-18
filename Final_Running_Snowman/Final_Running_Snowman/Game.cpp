@@ -473,7 +473,7 @@ void Game::DoCollisions() {
 		{
 			if (CheckCollisionOBB(*player, box))
 			{
-				player->snowmanHeight += 1.0f;
+				player->snowmanHeight += 2.0f;
 				box.destroyed = true;
 			}
 		}

@@ -13,13 +13,13 @@ public:
 	glm::vec3 right = glm::vec3(1.0f, 0.0f, 0.0f);
 
 
-	const float JumpVelocityY = 40.0f;
+	const float JumpVelocityY = 50.0f;
 	const float AcceG = -50.0f;
 	float velocityY = 0.0f;
 	bool isFlying = false;
 	float landY = 0.0f;
 
-	float snowmanHeight = 8.0f;
+	float snowmanHeight = 10.0f;
 	float decSpeed = 0.05f;
 
 	Player();
