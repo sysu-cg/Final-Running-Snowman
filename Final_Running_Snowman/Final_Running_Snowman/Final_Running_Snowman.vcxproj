@@ -69,7 +69,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>./OpenGL/Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>./OpenGL/Libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -77,6 +80,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +121,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GlobalVariable.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Sea.h" />
+    <ClInclude Include="SkyBox.h" />
+    <ClInclude Include="SpriteRenderer.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="TextRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="GlobalVariable.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="OpenGL\Includes\imgui\imgui.cpp" />
+    <ClCompile Include="OpenGL\Includes\imgui\imgui_draw.cpp" />
+    <ClCompile Include="OpenGL\Includes\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="OpenGL\Includes\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="OpenGL\Includes\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SkyBox.cpp" />
+    <ClCompile Include="SpriteRenderer.cpp" />
+    <ClCompile Include="stb_image.cpp" />
+    <ClCompile Include="TextRenderer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
